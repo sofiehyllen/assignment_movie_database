@@ -39,6 +39,7 @@ body {
             color: var(--colorText);
             font-size: 1rem;
             margin-bottom: 0.5rem;
+            cursor: pointer;
         }
     }
 
@@ -63,6 +64,7 @@ body {
             }
             .content > img {
                 width: 50%;
+                padding-top: 0.5rem;
             }
 
             .text {
@@ -109,11 +111,8 @@ body {
             .movie > .content > img {
                 width: 200px;
                 height: auto;
+                padding: 0;
             }
-        }
-        footer > p {
-            padding: 0.5rem 1rem 0.3rem 0;
-            text-align: right;
         }
     }
 }
