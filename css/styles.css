@@ -1,0 +1,119 @@
+@import '_variables.css';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.active {
+    text-decoration: underline;
+    color: var(--colorTextActive);
+}
+
+body {
+    font-family: var(--fontBody);
+
+    h1,
+    h2 {
+        font-family: var(--fontTitle);
+        color: var(--colorText);
+        font-weight: 900;
+        padding: 0.5rem 0.8rem;
+    }
+    p {
+        font-weight: 200;
+    }
+
+    header {
+        background: var(--colorPrimary);
+        nav {
+            background: var(--colorTertiary);
+            padding: 0.3rem 0.8rem;
+        }
+        ul {
+            list-style: none;
+        }
+        button {
+            background-color: transparent;
+            border: none;
+            color: var(--colorText);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    main {
+        padding: 1rem 1rem 0 1rem;
+
+        h2 {
+            background: var(--colorSecondary);
+            font-size: 1.6rem;
+        }
+
+        .movie {
+            border-radius: 0.5rem;
+            border: solid 0.1rem var(--colorSecondary);
+            overflow: hidden;
+            margin-bottom: 1rem;
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .content > img {
+                width: 50%;
+            }
+
+            .text {
+                padding: 0.5rem;
+            }
+            .txtOverview {
+                padding-bottom: 1rem;
+                font-size: 1.1rem;
+            }
+
+            .txtInfo:last-child {
+                padding-top: 0.5rem;
+            }
+
+            .txtInfo > span {
+                font-weight: 400;
+            }
+        }
+    }
+
+    footer {
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        padding: 0.3rem 0;
+
+        font-family: var(--fontTitle);
+        font-size: larger;
+        text-align: center;
+        background: var(--colorPrimary);
+        color: var(--colorText);
+    }
+
+    @media (min-width: 768px) {
+        nav > ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+        main {
+            .movie > .content {
+                flex-direction: row;
+                align-items: initial;
+            }
+            .movie > .content > img {
+                width: 200px;
+                height: auto;
+            }
+        }
+        footer > p {
+            padding: 0.5rem 1rem 0.3rem 0;
+            text-align: right;
+        }
+    }
+}
